@@ -11,6 +11,10 @@ import (
 	"github.com/tetratelabs/wazero/api"
 )
 
+// embeddedWASM is compiled into the library with the Go stdlib embed package.
+// Any binary importing this package, including ./cli, carries the wasm payload
+// with it and does not need libcapstone.wasm at runtime.
+//
 //go:embed internal/assets/libcapstone.wasm
 var embeddedWASM []byte
 

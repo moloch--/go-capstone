@@ -2,5 +2,3 @@
 /.gopath/
 /bin/
 /capstone/
-
-/internal/assets/*.wasm
