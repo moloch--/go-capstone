@@ -106,7 +106,7 @@ jobs:
           - runner: macos-latest
             goos: ios
             goarch: arm64
-            cgo_enabled: "0"
+            cgo_enabled: "1"
           - runner: ubuntu-latest
             goos: android
             goarch: arm64
