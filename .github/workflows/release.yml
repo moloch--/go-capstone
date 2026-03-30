@@ -165,7 +165,7 @@ jobs:
             ./cli
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-${{ matrix.goos }}-${{ matrix.goarch }}
           path: dist/go-capstone_${{ matrix.goos }}-${{ matrix.goarch }}${{ matrix.extension }}
@@ -181,10 +181,10 @@ jobs:
     timeout-minutes: 45
     steps:
       - name: Check Out Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Collect Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           path: release
           pattern: build-*
